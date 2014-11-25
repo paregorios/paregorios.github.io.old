@@ -213,7 +213,7 @@ p {
 }
 
 .badge + .oa {
-    background-color: green;
+    background-color: rgba(100, 169, 100, 0.61)
 }
 
 #left .row {
