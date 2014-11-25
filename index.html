@@ -8,7 +8,7 @@
         foaf: http://xmlns.com/foaf/0.1/ 
         og: http://ogp.me/ns# 
         schema: http://schema.org/"
-        typeof="bibo:Document cc:Work schema:WebPage foaf:PersonalProfileDocument og:profile">
+        typeof="bibo:Webpage cc:Work schema:WebPage foaf:PersonalProfileDocument og:profile">
 
     <title property="dcterms:title og:title">Tom Elliott's Personal Home Page</title>
 
@@ -87,10 +87,7 @@
                 <span style="display:none" property="foaf:title schema:honorificPrefix">Dr.</span>
                 <a style="display:none" rel="foaf:publications" href="#publications">publications</a>
                 <a style="display:none" rel="foaf:primaryTopicOf" href="."></a>
-                <p property="og:description dcterms:description">
-                    This homepage provides identifying information, with links to my other web
-                        profiles and to my publications.
-                </p>
+                <p property="og:description dcterms:description">This homepage provides identifying information, with links to my other web profiles and to my publications.</p>
             </div>
         </div>
 
@@ -229,8 +226,8 @@
                             <a rel="me" href="http://classics.case.edu/asgle/bookshelf/abbreviations-in-latin-inscriptions/">
                                 <span class="title" property="dcterms:title">Abbreviations in Latin Inscriptions</span></a>.
                             American Society of Greek and Latin Epigraphy (ASGLE), 
-                            1998.
-                            <span class="badge">author</span>
+                            <span property="dcterms:dateCopyrighted">1998</span>.
+                            <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">author</span>
                         </li>
 
                         <!-- Constructing a Digital Edition for the Peutinger Map (2008) -->
