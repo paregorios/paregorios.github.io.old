@@ -26,10 +26,10 @@ div.content-wrapper {
     width: auto !important;
 }
 
-#guts p {
-        max-width: 35em;
-
+#publications p, #publications li {
+        max-width: 45em;
 }
+
 
 @media (min-width: 768px) {
   .container {
@@ -117,10 +117,6 @@ ul.citations .badge {
 
 p {
     color: black;
-}
-
-li {
-    max-width: 35em;
 }
 
 .btn {
