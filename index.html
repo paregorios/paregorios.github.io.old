@@ -12,9 +12,18 @@
     <!-- metadata -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Homepage of Tom Elliott (paregorios)" />
+
     <meta name="author" property="foaf:name cc:attributionName" content="Tom Elliott" />
+    <meta property="foaf:givenName" content="Tom"/>
+    <meta property="foaf:lastName" content="Elliott"/>
+    <meta property="foaf:nick" content="paregorios"/>
+    <meta property="foaf:title" content="Dr."/>
     <meta property="foaf:mbox" content="tom.elliott@nyu.edu"/>
+
+    <meta name="description" content="Homepage of Tom Elliott (paregorios)" />
+    <link rel="foaf:PrimaryTopic" href="http://viaf.org/viaf/309842724"/>
+
+    <link rel="cc:license" href="http://creativecommons.org/licenses/by-sa/4.0/"/>
     <meta property="cc:attributionURL" content="http://viaf.org/viaf/309842724"/>
 
     <!-- favicon -->
@@ -43,7 +52,7 @@
     <![endif]-->
 </head>
 
-<body typeof="cc:Work schema:CreativeWork">
+<body typeof="cc:Work schema:CreativeWork foaf:PersonalProfileDocument">
 
     <!-- navigation -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -95,8 +104,9 @@
                                 <br />New York University</p>
                             <p>
                                 <a class="btn btn-default"
+                                    property="foaf:workplaceHomepage"
                                     href="http://isaw.nyu.edu/people/staff/tom-elliott"
-                                    role="button">ISAW profile &raquo;</a>
+                                    role="button">ISAW profile</a>
                             </p>
                         </div> <!-- end of div@id=work -->
                     </div>
@@ -197,7 +207,7 @@
                 </div> <!-- end of div@id=left -->
 
                 <!-- the right-hand main column is all about my publications -->
-                <div class="col-md-10" id="publications">
+                <div class="col-md-10" id="publications" property="foaf:publications">
                     <h2>Publications</h2>
                     <p>The following listing is incomplete, and is being rebuilt over time.</p>
                     
@@ -306,7 +316,7 @@
 
                         <!-- Horothesia (2007-) -->
                         <li id="blog">
-                            <a class="title" href="http://horothesia.blogspot.com/">
+                            <a class="title" property="foaf:weblog" href="http://horothesia.blogspot.com/">
                                 Horothesia</a>.
                             Blogspot.com, 
                             2007-.
