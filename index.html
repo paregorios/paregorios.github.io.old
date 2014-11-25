@@ -72,7 +72,7 @@
         <!-- Main jumbotron for primary message  -->
         <div class="jumbotron">
             <div class="container">
-                <h1 property="foaf:name">Tom Elliott</h1>
+                <h1>Tom Elliott</h1>
                 <p>
                     This homepage provides identifying information, with links to my other web
                         profiles and to my publications.
@@ -87,12 +87,12 @@
             <div class="row">
 
                 <!-- left-hand column contains two internal rows, each with a content div -->
-                <div class="col-md-2" id="left">
+                <div class="col-md-2" id="left" typeof="foaf:Person" resource="http://viaf.org/viaf/309842724">
 
                     <div class="row">
 
                         <!-- information about my work identity -->
-                        <div id="work" typeof="foaf:Person">
+                        <div id="work">
                             <p>Associate Director for Digital Programs
                                 <br />Senior Research Scholar</p>
                             <p>Institute for the Study of the Ancient World
@@ -103,16 +103,6 @@
                                     href="http://isaw.nyu.edu/people/staff/tom-elliott"
                                     role="button">ISAW profile</a>
                             </p>
-                            <div class="hidden">
-                                <span property="foaf:name">
-                                    <span property="foaf:givenName">Tom</span>
-                                    <span property="foaf:surname">Elliott</span>
-                                </span>
-                                <span property="foaf:nick">paregorios</span>
-                                <span property="foaf:title">Dr.</span>
-                                <span property="foaf:mbox">tom.elliott@nyu.edu</span>
-                                <a rel="foaf:publications" href="#publications">publications</a>
-                            </div>
                         </div> <!-- end of div@id=work -->
                     </div>
 
@@ -208,6 +198,17 @@
 
                             </ul>
                         </div> <!-- end of div@id=social -->
+                        <div class="hidden">
+                            <span property="foaf:name">Tom Elliott</span>
+                            <span property="foaf:givenName">Tom</span>
+                            <span property="foaf:surname">Elliott</span>
+                            <span property="foaf:nick">paregorios</span>
+                            <span property="foaf:title">Dr.</span>
+                            <span property="foaf:mbox">tom.elliott@nyu.edu</span>
+                            <a rel="foaf:publications" href="#publications">publications</a>
+                            <a rel="foaf:weblog" href="http://horothesia.blogspot.com/">Horothesia</div>
+                        </div>
+                        
                     </div>
                 </div> <!-- end of div@id=left -->
 
@@ -321,7 +322,7 @@
 
                         <!-- Horothesia (2007-) -->
                         <li id="blog">
-                            <a class="title" property="foaf:weblog" href="http://horothesia.blogspot.com/">
+                            <a class="title" href="http://horothesia.blogspot.com/">
                                 Horothesia</a>.
                             Blogspot.com, 
                             2007-.
