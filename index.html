@@ -6,18 +6,22 @@
         foaf: http://xmlns.com/foaf/0.1/ 
         og: http://ogp.me/ns# 
         schema: http://schema.org/"
-        typeof="cc:Work schema:WebPage foaf:PersonalProfileDocument">
+        typeof="cc:Work schema:WebPage foaf:PersonalProfileDocument og:profile">
 
-    <title property="dcterms:title">Tom Elliott's Personal Home Page</title>
+    <title property="dcterms:title og:title">Tom Elliott's Personal Home Page</title>
 
     <!-- metadata -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta name="author" content="Tom Elliott"/>
 
-    <meta name="schema:inLanguage" content="en-US"/>
+    <meta property="schema:inLanguage" content="en-US"/>
 
-    <meta name="description" content="Homepage of Tom Elliott (paregorios)" />
+    <meta property="og:site_name" content="www.paregorios.org"/>
+    <link property="og:url" href="http://www.paregorios.org"/>
+
+    <meta name="description" property="og:description" content="Homepage of Tom Elliott (paregorios)" />
     <link rel="foaf:PrimaryTopic schema:about" href="http://viaf.org/viaf/309842724"/>
 
     <link rel="cc:license schema:license" href="http://creativecommons.org/licenses/by-sa/4.0/"/>
@@ -138,7 +142,7 @@
 
                                 <!-- facebook -->
                                 <li>
-                                    <a href="https://www.facebook.com/paregorios">
+                                    <a rel="og:article:author" href="https://www.facebook.com/paregorios">
                                         <span class="fa fa-facebook-square fa-lg"></span>Facebook
                                     </a>
                                 </li>
