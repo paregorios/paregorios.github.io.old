@@ -12,18 +12,13 @@
     <!-- metadata -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <meta name="author" property="foaf:name cc:attributionName" content="Tom Elliott" />
-    <meta property="foaf:givenName" content="Tom"/>
-    <meta property="foaf:lastName" content="Elliott"/>
-    <meta property="foaf:nick" content="paregorios"/>
-    <meta property="foaf:title" content="Dr."/>
-    <meta property="foaf:mbox" content="tom.elliott@nyu.edu"/>
+    <meta name="author" content="Tom Elliott"/>
 
     <meta name="description" content="Homepage of Tom Elliott (paregorios)" />
     <link rel="foaf:PrimaryTopic" href="http://viaf.org/viaf/309842724"/>
 
     <link rel="cc:license" href="http://creativecommons.org/licenses/by-sa/4.0/"/>
+    <meta property="cc:attributionName" content="Tom Elliott" />
     <meta property="cc:attributionURL" content="http://viaf.org/viaf/309842724"/>
 
     <!-- favicon -->
@@ -97,7 +92,7 @@
                     <div class="row">
 
                         <!-- information about my work identity -->
-                        <div id="work">
+                        <div id="work" typeof="foaf:Person">
                             <p>Associate Director for Digital Programs
                                 <br />Senior Research Scholar</p>
                             <p>Institute for the Study of the Ancient World
@@ -108,6 +103,16 @@
                                     href="http://isaw.nyu.edu/people/staff/tom-elliott"
                                     role="button">ISAW profile</a>
                             </p>
+                            <div class="hidden">
+                                <span property="foaf:name">
+                                    <span property="foaf:givenName">Tom</span>
+                                    <span property="foaf:surname">Elliott</span>
+                                </span>
+                                <span property="foaf:nick">paregorios</span>
+                                <span property="foaf:title">Dr.</span>
+                                <span property="foaf:mbox">tom.elliott@nyu.edu</span>
+                                <link rel="foaf:publications" href="#publications"/>
+                            </div>
                         </div> <!-- end of div@id=work -->
                     </div>
 
@@ -207,7 +212,7 @@
                 </div> <!-- end of div@id=left -->
 
                 <!-- the right-hand main column is all about my publications -->
-                <div class="col-md-10" id="publications" property="foaf:publications">
+                <div class="col-md-10" id="publications">
                     <h2>Publications</h2>
                     <p>The following listing is incomplete, and is being rebuilt over time.</p>
                     
