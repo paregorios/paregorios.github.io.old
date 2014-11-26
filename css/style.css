@@ -219,6 +219,13 @@ p {
 .badge.wc {
     background-color: rgba(153, 102, 204, 0.61);
     padding-left: 2.2em;
+    color: white;
+}
+
+.badge.wc:hover, .badge.wc:active {
+    text-decoration: underline;
+    background-color: rgb(153, 102, 204);
+    box-shadow: 1px 1px #5B5853;
 }
 
 
