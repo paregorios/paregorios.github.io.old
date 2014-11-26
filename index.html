@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"
-    prefix="prism: http://prismstandard.org/namespaces/1.2/basic/ 
+    prefix="
+        article: http://ogp.me/ns/article#
         bibo: http://purl.org/ontology/bibo/ 
         dcterms: http://purl.org/dc/terms/
         foaf: http://xmlns.com/foaf/0.1/
+        og: http://ogp.me/ns#
+        owl: http://www.w3.org/2002/07/owl#
+        prism: http://prismstandard.org/namespaces/1.2/basic/ 
         schema: http://schema.org/
-        article: http://ogp.me/ns/article#
-        og: http://ogp.me/ns#" 
+        "
     typeof="bibo:Webpage cc:Work schema:WebPage foaf:PersonalProfileDocument og:profile">
 
 <head>
@@ -19,7 +22,7 @@
 
     <meta name="author" content="Tom Elliott"/>
     <meta property="dcterms:identifier" content="http://www.paregorios.org/"/>
-    <meta name="description" property="og:description dcterms:description" content="This homepage provides identifying information about Tom Elliott, with links to his other web profiles and to his publications."/>
+    <meta name="description" property="og:description dcterms:description" content="This homepage provides identifying information about Tom Elliott, links to his other web profiles, and a list of his publications."/>
 
     <meta property="schema:inLanguage" content="en-US"/>
 
@@ -88,7 +91,7 @@
                 <span style="display:none" property="foaf:title schema:honorificPrefix">Dr.</span>
                 <a style="display:none" rel="foaf:publications" href="#publications">publications</a>
                 <a style="display:none" rel="foaf:primaryTopicOf" href="."></a>
-                <p>This homepage provides identifying information, with links to my other web profiles and to my publications.</p>
+                <p>This homepage provides identifying information, links to my other web profiles, and a list of my publications.</p>
             </div>
         </div>
 
@@ -126,14 +129,14 @@
 
                                 <!-- doodle.com -->
                                 <li>
-                                    <a rel="me" href="http://www.doodle.com/paregorios">
+                                    <a href="http://www.doodle.com/paregorios">
                                         <span class="fa fa-calendar fa-lg"></span>Doodle
                                     </a>
                                 </li>
 
                                 <!-- work email -->
                                 <li>
-                                    <a rel="me" href="mailto:tom.elliott@nyu.edu?subject=contact%20via%20paregorios.org">
+                                    <a href="mailto:tom.elliott@nyu.edu?subject=contact%20via%20paregorios.org">
                                         <span class="fa fa-envelope-o fa-lg"></span>Email
                                     </a>
                                     <span style="display:none" property="foaf:mbox schema:email">tom.elliott@nyu.edu</span>
@@ -141,70 +144,70 @@
 
                                 <!-- facebook -->
                                 <li>
-                                    <a rel="me" href="https://www.facebook.com/paregorios">
+                                    <a href="https://www.facebook.com/paregorios">
                                         <span class="fa fa-facebook-square fa-lg"></span>Facebook
                                     </a>
                                 </li>
 
                                 <!-- flickr -->
                                 <li>
-                                    <a rel="me" href="https://secure.flickr.com/photos/paregorios/">
+                                    <a href="https://secure.flickr.com/photos/paregorios/">
                                         <span class="fa fa-flickr fa-lg"></span>Flickr
                                     </a>
                                 </li>
 
                                 <!-- github -->
                                 <li>
-                                    <a rel="me" href="https://github.com/paregorios">
+                                    <a href="https://github.com/paregorios">
                                         <span class="fa fa-github fa-lg"></span>GitHub
                                     </a>
                                 </li>
 
                                 <!-- Google+ -->
                                 <li>
-                                    <a rel="me" href="https://plus.google.com/+TomElliottISAW?rel=author">
+                                    <a href="https://plus.google.com/+TomElliottISAW?rel=author">
                                         <span class="fa fa-google-plus fa-lg"></span>Google+
                                     </a>
                                 </li>
 
                                 <!-- LinkedIn -->
                                 <li>
-                                    <a rel="me" href="http://www.linkedin.com/in/paregorios/">
+                                    <a href="http://www.linkedin.com/in/paregorios/">
                                         <span class="fa fa-linkedin-square fa-lg"></span>LinkedIn
                                     </a>
                                 </li>
 
                                 <!--  Pleiades -->
                                 <li>
-                                    <a rel="me" href="http://pleiades.stoa.org/Members/thomase">
+                                    <a href="http://pleiades.stoa.org/Members/thomase">
                                         <span class="fakefa fakefa-pleiades">π</span>Pleiades
                                     </a>
                                 </li>
 
                                 <!-- Sourceforge -->
                                 <li style="margin-top: 5px">
-                                    <a rel="me" href="http://sourceforge.net/u/paregorios/profile/">
+                                    <a href="http://sourceforge.net/u/paregorios/profile/">
                                         <span class="fakefa fakefa-sourceforge">s<sup>f</sup></span>SourceForge
                                     </a>
                                 </li>
 
                                 <!-- Twitter -->
                                 <li>
-                                    <a rel="me" href="https://twitter.com/paregorios">
+                                    <a href="https://twitter.com/paregorios">
                                         <span class="fa fa-twitter fa-lg"></span>Twitter
                                     </a>
                                 </li>
 
                                 <!-- VIAF -->
                                 <li>
-                                    <a rel="me" href="http://viaf.org/viaf/309842724">
+                                    <a href="http://viaf.org/viaf/309842724">
                                         <span class="fakefa fakefa-viaf">V</span><abbr title="Virtual International Authority File">VIAF</abbr>
                                     </a>
                                 </li>
 
                                 <!-- Zotero -->
                                 <li>
-                                    <a rel="me" href="https://www.zotero.org/paregorios">
+                                    <a href="https://www.zotero.org/paregorios">
                                         <span class="fakefa fakefa-zotero">Z</span>Zotero
                                     </a>
                                 </li>
@@ -224,15 +227,16 @@
 
                         <!-- Abbreviations in Latin Inscriptions (1998) -->
                         <li id="abbreviations-1998" typeof="bibo:Manual" resource="http://classics.case.edu/asgle/bookshelf/abbreviations-in-latin-inscriptions/">
-                            <a rel="me" href="http://classics.case.edu/asgle/bookshelf/abbreviations-in-latin-inscriptions/">
+                            <a href="http://classics.case.edu/asgle/bookshelf/abbreviations-in-latin-inscriptions/">
                                 <span class="title" property="dcterms:title">Abbreviations in Latin Inscriptions</span></a>.
                             American Society of Greek and Latin Epigraphy (ASGLE), 
                             <span property="dcterms:dateCopyrighted">1998</span>.
                             <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">author</span>
+                            <span class="badge">developer</span>
                         </li>
 
                         <!-- Constructing a Digital Edition for the Peutinger Map (2008) -->
-                        <li id="constructing-2008" typeof="bibo:Chapter" resource="pubids/constructing-2008">
+                        <li id="constructing-2008" typeof="bibo:Chapter schema:Article" resource="pubids/constructing-2008">
                             “<span property="dcterms:title">Constructing a Digital Edition for the Peutinger Map</span>” in 
                             <span class="title">Cartography in Antiquity and the Middle Ages: Fresh Perspectives, New Methods</span>.
                             <span property="bibo:editor" resource="http://viaf.org/viaf/59162760">Richard J.A. Talbert</span> 
@@ -243,11 +247,26 @@
                             <span property="dcterms:dateCopyrighted">2008</span>.
                             ISBN: <span property="prism:isbn">9789004166639</span>.
                             <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">chapter author</span>
+                            <a class="badge wc" rel="owl:sameAs" resource="http://www.worldcat.org/oclc/247313808" title="This work is cataloged in OCLC WorldCat"><span class="fa fa-external-link"></span>worldcat</a>
+                        </li>
+
+                        <!-- Cumulative bibliography of works by Richard Talbert (2015) -->
+                        <li id="cumulative-2015" typeof="bibo:Chapter schema:Article" resource="pubids/cumulative-2015">
+                            “<span property="dcterms:title">Cumulative Bibliography of Works by Richard Talbert</span>” in 
+                            <span class="title">Aspects of ancient institutions and geography: studies in honor of Richard J.A. Talbert</span>.
+                            <span property="bibo:editor" resource="http://viaf.org/viaf/26769123">Lee L. Brice</span> 
+                            and 
+                            <span property="bibo:editor" resource="http://viaf.org/viaf/24908929">Daniëlle Slootjes</span>, eds. 
+                            Impact of Empire 19. 
+                            <span property="dcterms:publisher" resource="http://viaf.org/viaf/135196879">Brill</span>, 
+                            <span property="dcterms:dateCopyrighted">2015</span> (anticipated).
+                            ISBN: <span property="prism:isbn">9789004283718</span>.
+                            <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">chapter author</span>
                         </li>
 
                         <!-- Current Epigraphy (2007-) -->
                         <li id="curep" typeof="bibo:Journal" resource="http://www.currentepigraphy.org/">
-                            <a rel="me" class="title" href="http://www.currentepigraphy.org/">
+                            <a class="title" href="http://www.currentepigraphy.org/">
                                 <span property="dcterms:title">Current Epigraphy</span> (CurEp)</a>.
                                 With <span property="bibo:editor" resource="http://viaf.org/viaf/106795353">Gabriel Bodard</span>, et al. eds. 
                             <span property="dcterms:dateCopyrighted">2007-</span>.
@@ -258,17 +277,18 @@
 
                         <!-- Demarc: An Open-access and Slowly Refactored and Enhanced Version of Tom Elliott's 2004 Ph.D. Dissertation (2012-) -->
                         <li id="demarc-2012" typeof="schema:Dataset" resource="https://github.com/paregorios/demarc">
-                            <a rel="me" class="title" href="https://github.com/paregorios/demarc">
+                            <a class="title" href="https://github.com/paregorios/demarc">
                                 <span property="dcterms:title">Demarc: An Open-access and Slowly Refactored and Enhanced Version of Tom Elliott's 2004 Ph.D. Dissertation</span></a>
                             GitHub,
                             <span property="dcterms:dateCopyrighted">2012-</span>.
                             <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">author</span>
+                            <span class="badge">developer</span>
                             <span class="badge oa" title="Demarc is an open-access work, published under a Creative Commons Attribution Share-Alike license">open: cc-by-sa</span>
                         </li>
 
                         <!-- Digital Geography and Classics (2009) -->
                         <li id="dhq-2009" typeof="bibo:AcademicArticle schema:ScholarlyArticle" resource="http://www.digitalhumanities.org/dhq/vol/3/1/000031/000031.html">
-                            “<a rel="me" href="http://www.digitalhumanities.org/dhq/vol/3/1/000031/000031.html"><span property="dcterms:title">Digital Geography and Classics</span></a>” 
+                            “<a href="http://www.digitalhumanities.org/dhq/vol/3/1/000031/000031.html"><span property="dcterms:title">Digital Geography and Classics</span></a>” 
                                 
                             with <span property="dcterms:creator" resource="http://sgillies.net/me">Sean Gillies</span> in
                             <span class="title">Digital Humanities Quarterly (DHQ)</span>
@@ -290,16 +310,18 @@
                             <span property="dcterms:dateAccepted">1997</span>.
                             <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">author</span>
                             <span class="badge type">thesis</span>
+                            <a class="badge wc" rel="owl:sameAs" resource="http://www.worldcat.org/oclc/37731175" title="This work is cataloged in OCLC WorldCat"><span class="fa fa-external-link"></span>worldcat</a>
                         </li>
 
                         <!-- EpiDoc Guidelines: Ancient Documents in TEI XML (2007-) -->
                         <li id="guidelines-2007" typeof="bibo:Standard" resource="http://www.stoa.org/epidoc/gl/latest/">
-                            <a rel="me" class="title" href="http://www.stoa.org/epidoc/gl/latest/">
+                            <a class="title" href="http://www.stoa.org/epidoc/gl/latest/">
                                 <span property="dcterms:title">EpiDoc Guidelines: Ancient Documents in TEI XML</span></a>.
                             With <span property="bibo:editor" resource="http://viaf.org/viaf/106795353">Gabriel Bodard</span>, et al. 
                             <span property="dcterms:publisher" resource="http://viaf.org/viaf/129392842">Stoa.org</span>, 
                             <span property="dcterms:dateCopyrighted">2007-</span>.
                             <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">co-author</span>
+                            <span class="badge">co-developer</span>
                         </li>
 
                         <!-- Epigraphic Evidence for Boundary Disputes in the Roman Empire (2004) -->
@@ -311,6 +333,7 @@
                             <span property="dcterms:dateAccepted">2004</span>.
                             <span class="badge" property="dcterms:creator" resource="http://viaf.org/viaf/309842724">author</span>
                             <span class="badge type">dissertation</span>
+                            <a class="badge wc" rel="owl:sameAs" resource="http://www.worldcat.org/oclc/57301012" title="This work is cataloged in OCLC WorldCat"><span class="fa fa-external-link"></span>worldcat</a>
                         </li>
 
                         <!-- Epigraphy and Digital Resources (2015) -->
@@ -329,7 +352,7 @@
 
                         <!-- Horothesia (2007-) -->
                         <li id="blog" typeof="schema:Blog" resource="http://horothesia.blogspot.com">
-                            <a rel="me" class="title" href="http://horothesia.blogspot.com">
+                            <a class="title" href="http://horothesia.blogspot.com">
                                 <span property="dcterms:title">Horothesia</span></a>.
                             Blogspot.com, 
                             <span property="dcterms:dateCopyrighted">2007-</span>.
@@ -353,7 +376,7 @@
 
                         <!-- Measuring and Mapping Space: Geographic Knowledge in Greco-Roman Antiquity (2013) -->
                         <li id="measuring-2013" typeof="bibo:Website schema:WebSite" resource="http://isaw.nyu.edu/exhibitions/space/">
-                            <a rel="me" class="title" href="http://isaw.nyu.edu/exhibitions/space/">
+                            <a class="title" href="http://isaw.nyu.edu/exhibitions/space/">
                                 <span property="dcterms:title">Measuring and Mapping Space: Geographic Knowledge in Greco-Roman Antiquity</span></a>.
                             Digital component of the eponymous exhibition (co-curated with Roberta Casagrande-Smith). 
                             <span property="dcterms:publisher" resource="http://viaf.org/viaf/122365087">Institute for the Study of the Ancient World</span>, 
@@ -406,7 +429,7 @@
 
                         <!-- Pleiades: A Community-built Gazetteer and Graph of Ancient Places (2006-) -->
                         <li id="pleiades-2006" typeof="bibo:Journal bibo:Website schema:WebSite" resource="http://pleiades.stoa.org">
-                            <a rel="me" class="title" href="http://pleiades.stoa.org">
+                            <a class="title" href="http://pleiades.stoa.org">
                                 <span property="dcterms:title">Pleiades: A Community-built Gazetteer and Graph of Ancient Places</span></a>.
                                 With <span property="bibo:editor" resource="http://viaf.org/viaf/104306181">Roger Bagnall</span>, et al. (eds.). 
                                 <span property="dcterms:publisher" resource="http://viaf.org/viaf/129392842">Stoa.org</span>, 
@@ -416,6 +439,7 @@
                             <span class="badge" property="bibo:editor" resource="http://viaf.org/viaf/309842724">co-managing editor</span>
                             <span class="badge" property="dcterms:contributor" resource="http://viaf.org/viaf/309842724">contributor</span>
                             <span class="badge oa" title="Pleiades is an open-access work, published under a Creative Commons Attribution license">open: cc-by</span>
+                            <a class="badge wc" rel="owl:sameAs" resource="http://www.worldcat.org/oclc/768967352" title="This work is cataloged in OCLC WorldCat"><span class="fa fa-external-link"></span>worldcat</a>
                         </li>
 
                         <!-- Report on the Linked Ancient World Data Institute (2012) -->

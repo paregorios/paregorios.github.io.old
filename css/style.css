@@ -208,13 +208,19 @@ p {
     background-color: #889CA7;
 }
 
-.badge + .type {
+.badge.type {
     background-color: #A79377;
 }
 
-.badge + .oa {
-    background-color: rgba(100, 169, 100, 0.61)
+.badge.oa {
+    background-color: rgba(100, 169, 100, 0.61);
 }
+
+.badge.wc {
+    background-color: rgba(153, 102, 204, 0.61);
+    padding-left: 2.2em;
+}
+
 
 #left .row {
     padding-left: 15px;
