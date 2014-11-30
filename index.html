@@ -242,9 +242,11 @@
                             in 
                             <span property="dcterms:isPartOf" typeof="bibo:EditedBook schema:Book">
                                 <span class="title" property="dcterms:title">Cartography in Antiquity and the Middle Ages: Fresh Perspectives, New Methods</span>.
-                                <span property="bibo:editor" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/59162760"><span property="foaf:name">Richard J.A. Talbert</span></span> 
-                                and 
-                                <span property="bibo:editor" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/49278467"><span property="foaf:name">Richard W. Unger</span></span>, eds. 
+                                <span property="bibo:editorList">
+                                    <span property="bibo:editor" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/59162760"><span property="foaf:name">Richard J.A. Talbert</span></span> 
+                                    and 
+                                    <span property="bibo:editor" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/49278467"><span property="foaf:name">Richard W. Unger</span></span>, eds. 
+                                </span>
                                 Technology and Change in History 10. 
                                 <span property="dcterms:publisher" typeof="foaf:Organization schema:Organization" resource="http://viaf.org/viaf/135196879"><span property="foaf:name">Brill</span></span>, 
                                 <span property="dcterms:dateCopyrighted">2008</span>.
@@ -256,15 +258,24 @@
                         </li>
 
                         <!-- Corpus of the Inscriptions of Campā (2010-) -->
-                        <li id="corpus-2010" typeof="bibo:Website schema:WebSite" resource="http://isaw.nyu.edu/publications/inscriptions/campa/">
+                        <li id="corpus-2010" typeof="bibo:Website bibo:EditedBook schema:WebSite schema:Book" resource="http://isaw.nyu.edu/publications/inscriptions/campa/">
                             <a class="title" href="http://isaw.nyu.edu/publications/inscriptions/campa/">
                                 <span property="dcterms:title">Corpus of the Inscriptions of Campā</span></a>.
-                                With <span property="dcterms:creator" typeof="foaf:Person" resource="http://viaf.org/viaf/11026260"><span property="foaf:name">Arlo Griffiths</span></span>, et al.
+                            With <span property="dcterms:creator" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/11026260"><span property="foaf:name">Arlo Griffiths</span></span>, et al.
+                            <span style="display:none" property="bibo:contributorList">
+                                <span property="bibo:editor dcterms:contributor" resource="http://viaf.org/viaf/11026260">Arlo Griffiths</span>
+                                <span property="dcterms:contributor" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/289845900"><span property="foaf:name">Amandine Lepoutre</span></span>
+                                <span property="dcterms:contributor" typeof="foaf:Person schema:Person" resource="http://viaf.org/viaf/211328662"><span property="foaf:name">William Southworth</span></span>
+                                <span property="dcterms:contributor" typeof="foaf:Person schema:Person"><span property="foaf:name">Khom Sreymom</span></span>
+                                <span property="dcterms:contributor" typeof="foaf:Person schema:Person"><span property="foaf:name">Ham Seihasarann</span></span>
+                                <span property="dcterms:contributor" resource="http://viaf.org/viaf/309842724">Tom Elliott</span>
+                                <span property="dcterms:contributor" resource="http://viaf.org/viaf/78316782"><span property="foaf:name">Hugh Cayless</span></span>
+                            </span>
                             <span property="dcterms:publisher" typeof="foaf:Organization schema:Organization" resource="http://viaf.org/viaf/168331514">École française d'Extrême-Orient (EFEO)</span>
                             and
                             <span property="dcterms:publisher" typeof="foaf:Organization schema:Organization" resource="http://viaf.org/viaf/122365087">Institute for the Study of the Ancient World</span>,
                             <span property="dcterms:dateCopyrighted">2010-</span>.
-                            <span class="badge" property="dcterms:contributor" resource="http://viaf.org/viaf/309842724">co-developer</span>
+                            <span class="badge">co-developer</span>
                             <span class="badge">designer</span>
                             <span class="badge">encoding recommender</span>
                         </li>
