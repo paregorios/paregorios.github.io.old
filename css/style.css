@@ -3,6 +3,29 @@ body {
     height: 100%;
 }
 
+#left {
+    width: 280px !important;
+
+}
+#right {
+    max-width: 50em !important;
+}
+divo#ueberwrapper {
+    position:fixed !important;
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+hr {
+    clear: both;
+}
 
 .navbar {
     background-color: #889CA7;
@@ -92,12 +115,23 @@ ul.citations li {
     text-align: left;
     margin-left: 2em;
     text-indent: -2em;
-     margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 ul.citations .badge {
     display: inline;
     margin-left: 0.5em;
+}
+
+#right ul {
+    list-style-position: inside;
+    list-style-type: disc;
+    margin: 0px;
+    padding: 0px;
+}
+
+#right ul > li > ul {
+    margin-left: 1em;
 }
 
 .title {
@@ -168,6 +202,13 @@ p {
     padding-right: 3px;
     font-size: 90%;
 }
+.fakefa-isaw {
+    font-family: serif !important;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+
 .fakefa-orcid {
     margin-left: 4px;
     margin-right: 14px !important;
