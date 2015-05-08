@@ -51,6 +51,7 @@
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/feedstyle.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -99,7 +100,7 @@
         <div class="container" id="guts">
 
             <!-- main layout is a row of two columns (left and right) -->
-            <div class="row">
+            <div class="row" id="innards">
 
                 <!-- left-hand column contains two internal rows, each with a content div -->
                 <div class="col-md-2" id="left">
@@ -249,7 +250,7 @@
                                 <br />New York University</a></p>
                         </div> <!-- end of div@id=work -->
                         <div id="roles">
-                            <h2>Activities</h2>
+                            <h2>Roles</h2>
                             <ul>
                                 <li>Author: <a href="http://horothesia.blogspot.com"><i>Horothesia</i> (personal blog)</a></li>
                                 <li>Co-managing Editor: <a href="http://pleiades.stoa.org"><i>Pleiades</i> Gazetteer of Ancient Places</a></li>
@@ -268,27 +269,56 @@
                         <div id="publications">
                             <h2>Publications</h2>
                             <p>I am using Zotero.org to curate and publish <a href="https://www.zotero.org/paregorios/items/collectionKey/X2JCWQQS">an at-present-incomplete list of my publications</a>.</p>
-                    </div>
-                <div id="syndication">
-                    <!-- Define the container --> 
+                        </div>
+                    </div> <!-- end of row -->
+                </div> <!-- end of righthand column -->
+                <div class="col-md-12" id="syndication">
+                    <h2>Partial Public Activity Stream</h2>
+                    <p>Notices below are aggregated from on-line publication and data management environments that provide open RSS or Atom feeds for any user's activity. It reflects my published activity in such environments over the past year. Environments that don't provide such feeds (such as Academia.edu, Facebook, and Google+) or that demand branded formatting (such as Twitter) are not included here. I used Camilo Aguilar's <a href="https://github.com/camagu">jQuery Feeds RSS/Atom Aggregator</a> to pull the feeds together in your browser and present them here.</p> 
                     <div class="feed">&nbsp;</div>
-                    
-                    <!-- Define the entries' template inside a script tag.
-                         Set it's *type* to *text/html* and assign it an *id*.
-                         You can print the entry's properties by writting their name inside <!= !>. -->
                     <script type="text/html" id="entryTmpl">
                         <article class="<!=source!> entry">
-                            <p>
-                                <a class="link" href="<!=feedLink!>" title="<!=feedDescription!>"><!=feedTitle!></a>
-                                <! if (publishedDate) { !><span class="publishedDate"><!=publishedDate!></span><! } !></p>
-                            <p class="author"><!=author!></p>
-                            <div class="content"><!=content!></div>
+                            <p class="header">
+                                <! if (publishedDate) { !><span class="publishedDate"><!=publishedDate!></span><! } !>
+                                <! if (source) { !> 
+                                    on <span class="source">
+                                        <! if (source=='github') { !>GitHub<! } !>
+                                        <! if (source=='digclass') { !>The Digital Classicist Wiki<! } !>
+                                        <! if (source=='flickr') { !>Flickr<! } !>   
+                                        <! if (source=='isaw') { !>the ISAW website<! } !>    
+                                        <! if (source=='pleiades') { !>Pleiades<! } !>  
+                                        <! if (source=='sourceforge') { !>SourceForge<! } !>   
+                                        <! if (source=='wikipedia') { !>Wikipedia<! } !>
+                                        <! if (source=='zotread') { !>Zotero (daily reading)<! } !>    
+                                        <! if (source=='horothesia') { !>Horothesia<! } !>             
+                                    </span><! } !>
+                                </p>
+                            <div class="content">
+                                <! if (source=='digclass') { !>
+                                    <p>Tom modified the page entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo;.</p>
+                                <! } else if (source=='pleiades') { !>
+                                    <p>A page entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo;, which was originally created by Tom, was modified.</p>
+                                <! } else if (source=='isaw') { !>
+                                    <p>Tom modified the page entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo;.</p>
+                                <! } else if (source=='github') { !>
+                                    <p><a href="<!=link!>"><!=title!></a>.</p>
+                                <! } else if (source=='sourceforge') { !>
+                                    <p>Tom made a change to content entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo;.</p>
+                                <! } else if (source=='wikipedia') { !>
+                                    <p>Tom modified the page entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo;.</p>
+                                <! } else if (source=='zotread') { !>
+                                    <p>Tom added a record entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; to his daily reading list.</p>
+                                <! } else if (source=='horothesia') { !>
+                                    <p>Tom modified a post entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; on his blog.</p>
+
+                                <! } else { !>
+                                    <!=content!>
+                                <! } !>
+                            </div>
+                            
                         </article>
                     </script>
-                </div>
-
-
-                </div>
+                </div> <!-- end of syndication div -->
 
             </div> <!-- end of the main content layout section -->
 
@@ -325,19 +355,34 @@
                     
                     // Feeds: Set keys and paths of feeds
                     feeds : {
-                        github : 'https://github.com/paregorios.atom'
+                        github : 'https://github.com/paregorios.atom',
+                        digclass : 'https://wiki.digitalclassicist.org/api.php?action=feedcontributions&user=TomElliott&feedformat=atom',
+                        flickr : 'https://secure.flickr.com/services/feeds/photos_public.gne?id=31154428@N05&lang=en-us&format=atom',
+                        isaw : 'http://isaw.nyu.edu/members/te20-40nyu.edu/latest-work/RSS',
+                        pleiades : 'http://pleiades.stoa.org/Members/thomase/creations/RSS',
+                        sourceforge : 'https://sourceforge.net/u/paregorios/profile/feed.rss',
+                        wikipedia : 'https://en.wikipedia.org/w/api.php?action=feedcontributions&user=Paregorios&feedformat=atom',
+                        zotread : 'https://api.zotero.org/users/465/collections/V9VA7HTP/items/top?start=0&limit=25&format=atom&v=1',
+                        horothesia : 'http://horothesia.blogspot.com/feeds/posts/default'
                     },
+                    //max: 5,
                     
                     // Preprocess: manipulated entries data before it's rendered
                     preprocess : function(feed) {
                         // Inside the callback 'this' corresponds to the entry being processed
                         
                         if (!this.publishedDate) {
-                            return;
+                            return false;
                         }
-                        
+                        var difference = moment().diff(moment(this.publishedDate), 'months')
+                        console.log(difference)
+                        if (difference > 13) {
+                            return false;
+                        }
+
                         // Example: Using moment.js to format dates as time ago, totally optional.
                         this.publishedDate = moment(this.publishedDate).fromNow();
+
                     },
                     
                     // entryTemplate: template used to render entries. Can be a string, an id or a callback.
@@ -360,10 +405,6 @@
                             });
                         }
                         
-                        // Tracking outbound links, ignore
-                        $(this).find('a').click(function() {
-                            _gaq.push(['_trackEvent', 'Outbound Demo Links', 'Click', $(this).attr('href')]);
-                        });
                     }
                 });
             });

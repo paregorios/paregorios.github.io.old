@@ -1,9 +1,10 @@
 body {
     color: black;
-    background:url(../images/background-1080-l.png);
-    background-repeat:no-repeat;
-    background-size: cover;    
     min-height: 100vh;
+
+        background:url(../images/background-1080-l.png);
+    background-repeat:no-repeat;
+    background-size: 1920px 1080px;
 }
 
 #left {
@@ -39,7 +40,9 @@ div.content-wrapper {
 .container {
     margin-left: 15px;
     width: auto !important;
+
 }
+
 
 @media (min-width: 768px) {
   .container {
@@ -138,6 +141,7 @@ ul.citations .badge {
 
 p {
     color: black;
+    max-width: 50em;
 }
 
 .btn {

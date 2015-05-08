@@ -1,0 +1,75 @@
+/* --------------------------------------------------------------------------
+   Feed's container
+   -------------------------------------------------------------------------- */
+.feed {
+	column-gap: 0.5em;
+	-moz-column-gap: 0.5em;
+	-webkit-column-gap: 0.5em;
+	column-width: 280px;
+	-moz-column-width: 280px;
+	-webkit-column-width: 280px;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	margin-top: 2em;
+}
+
+/* --------------------------------------------------------------------------
+   Loading template
+   -------------------------------------------------------------------------- */
+  
+.feed > .loading.entry {
+	text-align: center;
+	width: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Entry
+   -------------------------------------------------------------------------- */
+  
+.feed > .entry {
+	background-color: white;
+	border: 1px solid #bbb;
+	border-radius: 1em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-shadow: 1px 1px 2px #888888;
+	display: inline-block; /* Avoid breaks between columns */
+	opacity: 0.8;
+	padding: 1em;
+	margin: 0 0 1em 0;
+	width: 280px;
+}
+
+.feed > .entry br + br {
+	height: 0; /* avoid extra spaces */
+}
+
+.feed > .entry p {
+	margin-bottom: 0.5em;
+}
+
+.feed > .entry img,
+.feed > .entry iframe {
+	display: block;
+	max-width: 100%;
+	opacity: none;
+}
+
+.feed > .entry .author {
+	font-weight: 600;
+	margin-bottom: 0.75em;
+}
+
+.feed > .entry .header {
+	background-color: rgb(42, 100, 150);
+	border-radius: 4px;
+	color: white;
+	display: inline-block;
+	font-size: 11px;
+	height: 16px;
+	line-height: 16px;
+	padding: 0 1em;
+	vertical-align: middle;
+}
+
