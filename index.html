@@ -271,7 +271,7 @@
                     </div>
                 <div id="syndication">
                     <!-- Define the container --> 
-                    <div class="feed">&nbsp;</div>
+                    <div id="container">&nbsp;</div>
                     
                     <!-- Define the entries' template inside a script tag.
                          Set it's *type* to *text/html* and assign it an *id*.
@@ -320,7 +320,7 @@
                    ================================================================== */
                 
                 // Attach feeds to container - $( container ).feeds({ options...});
-                $('.feed').feeds({
+                $('#container').feeds({
                     
                     // Feeds: Set keys and paths of feeds
                     feeds : {
