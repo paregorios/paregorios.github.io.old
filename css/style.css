@@ -13,14 +13,7 @@ body {
 #right {
     max-width: 50em !important;
 }
-divo#ueberwrapper {
-    position:fixed !important;
-position:absolute;
-top:0;
-right:0;
-bottom:0;
-left:0;
-}
+
 
 h2 {
     font-size: 120%;
@@ -47,11 +40,6 @@ div.content-wrapper {
     margin-left: 15px;
     width: auto !important;
 }
-
-#publications p, #publications li {
-        max-width: 45em;
-}
-
 
 @media (min-width: 768px) {
   .container {
@@ -156,13 +144,10 @@ p {
     box-shadow: 1px 1px #5B5853;
 }
 
-#social, #work, #publications {
+#social, #work, #publications, #roles {
     margin-top: 25px;
 }
 
-#social .list-unstyled a {
-    color: black;
-}
 
 .fakefa {
     display: inline-block;
@@ -261,12 +246,6 @@ p {
     border-radius: 4px;
     font-size: 90%;
     font-weight: bold;
-}
-
-#publications h2 {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 0px;
 }
 
 .badge {
