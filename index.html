@@ -274,7 +274,7 @@
                 </div> <!-- end of righthand column -->
                 <div class="col-md-12" id="syndication">
                     <h2>Partial Public Activity Stream</h2>
-                    <p>Notices below are aggregated from on-line publication and data management environments that provide open RSS or Atom feeds for any user's activity. It reflects my published activity in such environments over the past year. Environments that don't provide such feeds (such as Academia.edu, Facebook, and Google+) or that demand branded formatting (such as Twitter) are not included here. I used Camilo Aguilar's <a href="https://github.com/camagu">jQuery Feeds RSS/Atom Aggregator</a> to pull the feeds together in your browser and present them here.</p> 
+                    <p>Notices below are aggregated from on-line publication and data management environments that provide open RSS or Atom feeds for any user's activity. It reflects my published activity in such environments over the past six months. Environments that don't provide such feeds (such as Academia.edu, Facebook, and Google+) or that demand branded formatting (such as Twitter) are not included here. I used Camilo Aguilar's <a href="https://github.com/camagu">jQuery Feeds RSS/Atom Aggregator</a> to pull the feeds together in your browser and present them here.</p> 
                     <div class="feed">&nbsp;</div>
                     <script type="text/html" id="entryTmpl">
                         <article class="<!=source!> entry">
@@ -290,7 +290,8 @@
                                         <! if (source=='sourceforge') { !>SourceForge<! } !>   
                                         <! if (source=='wikipedia') { !>Wikipedia<! } !>
                                         <! if (source=='zotread') { !>Zotero (daily reading)<! } !>    
-                                        <! if (source=='horothesia') { !>Horothesia<! } !>             
+                                        <! if (source=='horothesia') { !>Horothesia<! } !>  
+                                        <! if (source=='stoa') { !>Stoa.org<! } !>             
                                     </span><! } !>
                                 </p>
                             <div class="content">
@@ -307,9 +308,11 @@
                                 <! } else if (source=='wikipedia') { !>
                                     <p>Tom modified the page entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo;.</p>
                                 <! } else if (source=='zotread') { !>
-                                    <p>Tom added a record entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; to his daily reading list.</p>
+                                    <p>Tom cited &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; in his daily reading list.</p>
                                 <! } else if (source=='horothesia') { !>
-                                    <p>Tom modified a post entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; on his blog.</p>
+                                    <p>Tom modified a post entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; on his blog (Horothesia).</p>
+                                <! } else if (source=='stoa') { !>
+                                    <p>Tom modified a post entitled &ldquo;<a href="<!=link!>"><!=title!></a>&rdquo; on The Stoa blog.</p>
 
                                 <! } else { !>
                                     <!=content!>
@@ -363,7 +366,8 @@
                         sourceforge : 'https://sourceforge.net/u/paregorios/profile/feed.rss',
                         wikipedia : 'https://en.wikipedia.org/w/api.php?action=feedcontributions&user=Paregorios&feedformat=atom',
                         zotread : 'https://api.zotero.org/users/465/collections/V9VA7HTP/items/top?start=0&limit=25&format=atom&v=1',
-                        horothesia : 'http://horothesia.blogspot.com/feeds/posts/default'
+                        horothesia : 'http://horothesia.blogspot.com/feeds/posts/default',
+                        stoa : 'http://www.stoa.org/archives/author/tom/feed',
                     },
                     //max: 5,
                     
@@ -376,7 +380,7 @@
                         }
                         var difference = moment().diff(moment(this.publishedDate), 'months')
                         console.log(difference)
-                        if (difference > 13) {
+                        if (difference > 6) {
                             return false;
                         }
 
